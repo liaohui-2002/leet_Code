@@ -13,7 +13,7 @@ public class Solution {
         int[] R = new int[n];
         int[] NR = new int[n];
         //初始化
-        //第一个抢 就是第一个房间的值
+        //第一个抢 就是第hu一个房间的值
         R[0] = nums[0];
         NR[0] = 0;//第一个房间不抢 0
         //状态转移
