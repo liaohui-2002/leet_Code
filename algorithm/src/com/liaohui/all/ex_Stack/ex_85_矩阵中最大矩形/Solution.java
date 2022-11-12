@@ -1,16 +1,30 @@
-package com.liaohui.all.ex_Stack.ex_84_柱状图中的最大矩形;
+package com.liaohui.all.ex_Stack.ex_85_矩阵中最大矩形;
 
-import org.junit.Test;
-
-import java.util.*;
-
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Stack;
 
 /**
  * @author Mr.lh
- * @date 2022/11/4 22:19
+ * @date 2022/11/12 18:02
  */
 public class Solution {
-    public  int largestRectangleArea(int[] heights) {
+    public int maximalRectangle(char[][] matrix) {
+        int m  = matrix.length,n = matrix[0].length;
+        int []  arr= new int[n];
+        int ans = 0;
+        //把矩阵按行遍历  逐层转换为柱状图。
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j <n; j++) {
+                if(matrix[i][j] == '1') arr[j]++;
+                else arr[j]=0;
+            }
+            ans = Math.max(ans,largestRectangleArea(arr));
+        }
+        return ans;
+    }
+
+    private  int largestRectangleArea(int[] heights) {
         //corner case
         if (heights.length<=0){
             return 0;
@@ -41,12 +55,5 @@ public class Solution {
             }
         }
         return res;
-    }
-
-    @Test
-    public void test(){
-        int[] arr = new int[]{2,1,5,6,2,3};
-        int area = largestRectangleArea(arr);
-        System.out.println(area);
     }
 }
