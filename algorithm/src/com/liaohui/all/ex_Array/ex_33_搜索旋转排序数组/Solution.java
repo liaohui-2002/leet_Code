@@ -28,10 +28,10 @@ public class Solution {
         //根据端点数据判断哪边是有序的
         if(leftValue < midValue){//左半边有序
             //若目标值在有序区间范围内，搜索有序侧，否则搜索无需侧
-            if(target>midValue && target < midValue)
+            if(target>leftValue && target < midValue)
                 return searchHelper(nums,left+1,mid-1,target);
             else
-                return searchHelper(nums,mid+1,right-1,target);
+                return searchHelper(nums,mid+1,right,target);
         }else {
             //右侧有序
             //右侧有序且target在有序范围内
@@ -39,7 +39,7 @@ public class Solution {
                 return searchHelper(nums,mid+1,right-1,target);
             else
                 //否则搜索无序区间
-                return searchHelper(nums,left+1,mid-1,target);
+                return searchHelper(nums,left,mid-1,target);
 
         }
     }
