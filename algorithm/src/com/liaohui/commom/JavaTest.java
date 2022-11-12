@@ -37,7 +37,8 @@ public class JavaTest {
 
   @Test
     public void testHashMap(){
-              
+        Object o = new Object();
+      System.out.println(o.hashCode());
   }
 
 }
