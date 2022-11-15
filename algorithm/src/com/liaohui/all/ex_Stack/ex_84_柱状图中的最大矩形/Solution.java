@@ -9,6 +9,10 @@ import java.util.*;
  * @author Mr.lh
  * @date 2022/11/4 22:19
  */
+
+/**
+ * 没写注释。
+ */
 public class Solution {
     public  int largestRectangleArea(int[] heights) {
         //corner case
