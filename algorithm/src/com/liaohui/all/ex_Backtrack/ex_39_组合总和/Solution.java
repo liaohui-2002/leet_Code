@@ -1,15 +1,11 @@
 package com.liaohui.all.ex_Backtrack.ex_39_组合总和;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 /**
  * @author Mr.lh
  * @date 2022/11/6 18:10
  */
 public class Solution {
-    //结果容器
+   /* //结果容器
     List<List<Integer>> res = new ArrayList<>();
     //临时容器
     List<Integer> list = new ArrayList<>();
@@ -34,5 +30,8 @@ public class Solution {
             helper(candidates,i,target-candidates[i]);
             list.remove(list.size()-1);
         }
-    }
+    }*/ //第一次看没看懂
+
+
+
 }
