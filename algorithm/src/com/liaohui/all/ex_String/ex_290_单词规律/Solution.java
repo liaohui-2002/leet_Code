@@ -20,7 +20,6 @@ import java.util.Map;
 public class Solution {
     public boolean wordPattern(String pattern, String s) {
         //思路 借助map让pattern中的字符和s中的单词进行映射
-
         //先将s分割为字符串数组
         String[] str = s.split(" ");
         char[] patterns = pattern.toCharArray();
